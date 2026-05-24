@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectTasksManagement.Application.Enums
+namespace ProjectTasksManagement.Domain.Enums
 {
+
     public enum SucessType
     {
         Ok = 200,

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjectTasksManagement.Application.Dtos.Authentication;
+using ProjectTasksManagement.Application.GenericResponse;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,7 @@ namespace ProjectTasksManagement.Application.Contracts
 {
    public interface IAuthService
      {
-        //Task<AuthResponseDto> RegisterAsync(RegisterDto userDto);
-        //Task<AuthResponseDto> LoginAsync(LoginDto userDto);
-     }
+        Task<ApiResponse<AuthResponseDto>> RegisterAsync(RegisterRequestDto userDto);
+        Task<ApiResponse<AuthResponseDto>> LoginAsync(LoginRequestDto userDto);
+    }
 }

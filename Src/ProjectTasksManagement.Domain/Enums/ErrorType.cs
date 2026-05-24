@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectTasksManagement.Application.Enums
+namespace ProjectTasksManagement.Domain.Enums
 {
-  
+
     public enum ErrorType
     {
         NotFound = 404,
@@ -15,4 +15,5 @@ namespace ProjectTasksManagement.Application.Enums
         Unauthorized = 401,
         InternalServerError = 500
     }
+
 }

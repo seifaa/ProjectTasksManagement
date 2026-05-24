@@ -1,4 +1,4 @@
-﻿using ProjectTasksManagement.Application.Enums;
+﻿using ProjectTasksManagement.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;

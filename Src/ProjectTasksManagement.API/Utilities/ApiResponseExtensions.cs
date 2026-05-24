@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProjectTasksManagement.Application.Enums;
+using ProjectTasksManagement.Domain.Enums;
 using ProjectTasksManagement.Application.GenericResponse;
 
 namespace ProjectTasksManagement.API.Utilities
@@ -14,9 +14,8 @@ namespace ProjectTasksManagement.API.Utilities
 
                 return response.SucessType switch
                 {
-                    SucessType.Ok => new OkObjectResult(response),
                     SucessType.Created => new CreatedResult("", response),
-                    _ => new ObjectResult(response.Error) { StatusCode = 500 } // refactor this
+                    _ => new OkObjectResult(response) 
                 };
             }
 
@@ -32,11 +31,8 @@ namespace ProjectTasksManagement.API.Utilities
         {
             if (response.IsSuccess)
             {
+                return string.IsNullOrEmpty(response.Messsage) ? new NoContentResult() :new OkObjectResult(response);
 
-
-                return new OkObjectResult(response);
-                  
-                
             }
 
             return response.Error.ErrorType switch
