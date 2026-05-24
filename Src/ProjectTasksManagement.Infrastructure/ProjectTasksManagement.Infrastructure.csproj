@@ -15,4 +15,10 @@
     <ProjectReference Include="..\ProjectTasksManagement.Domain\ProjectTasksManagement.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Persistence\Repositories\Task\" />
+    <Folder Include="Persistence\Repositories\Project\" />
+    <Folder Include="Persistence\Repositories\User\" />
+  </ItemGroup>
+
 </Project>
